@@ -334,9 +334,9 @@ const emit = defineEmits<{
   'close-mobile': []
 }>()
 
-// Composables para empresa
+// Composables para empresa - SIMPLES
 const { nomeEmpresa, buscarNomeEmpresa } = process.client ? useEmpresa() : { 
-  nomeEmpresa: ref(null), 
+  nomeEmpresa: ref('Carregando...'), 
   buscarNomeEmpresa: async () => {} 
 }
 
@@ -344,21 +344,21 @@ const { nomeEmpresa, buscarNomeEmpresa } = process.client ? useEmpresa() : {
 const userEmail = ref<string | null>(null)
 const isLoggedIn = ref(false)
 
-// Toast
+// Toast e montagem SIMPLES
 const toast = ref<any>(null)
 if (process.client) {
   onMounted(async () => {
     toast.value = await useToastSafe()
-    
-    // Buscar email do localStorage ou sessão
     checkUserSession()
     
-    // Buscar nome da empresa sempre que o componente for montado
-    await buscarNomeEmpresa()
+    // BUSCA SIMPLES DA EMPRESA - sem complicação
+    setTimeout(async () => {
+      await buscarNomeEmpresa()
+    }, 1000)
   })
 }
 
-// Atualizar nome da empresa sempre que a página for recarregada
+// Atualizar nome da empresa quando página ficar visível - SIMPLES
 if (process.client) {
   // Escutar mudanças de visibilidade da página para atualizar dados
   const handleVisibilityChange = async () => {
