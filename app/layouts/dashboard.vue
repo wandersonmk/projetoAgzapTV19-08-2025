@@ -103,6 +103,10 @@ const pageTitle = computed(() => {
   switch (route.path) {
     case '/':
       return 'Dashboard'
+    case '/pedidos':
+      return 'Pedidos'
+    case '/cardapio':
+      return 'Cardápio'
     case '/clientes':
       return 'Clientes'
     case '/ajuste-da-ia':
@@ -116,6 +120,10 @@ const pageDescription = computed(() => {
   switch (route.path) {
     case '/':
       return 'Visão geral do sistema'
+    case '/pedidos':
+      return 'Gerencie todos os pedidos e vendas'
+    case '/cardapio':
+      return 'Gerencie itens e categorias do cardápio'
     case '/clientes':
       return 'Gerencie todos os seus clientes'
     case '/ajuste-da-ia':

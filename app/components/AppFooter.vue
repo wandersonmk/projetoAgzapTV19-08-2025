@@ -3,7 +3,7 @@
     <div class="text-center">
       <p class="text-sm text-muted-foreground">
         © {{ currentYear }} 
-        <span class="font-medium text-foreground">Agzap Gestão de Clientes</span>
+        <span class="font-medium text-foreground">Agzap Gestão de Pedidos</span>
         - Todos os direitos reservados
       </p>
     </div>
