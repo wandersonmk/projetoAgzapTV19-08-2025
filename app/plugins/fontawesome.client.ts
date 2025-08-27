@@ -18,7 +18,8 @@ import {
   faInfoCircle,
   faCheckCircle,
   faRobot,
-  faQuestionCircle
+  faQuestionCircle,
+  faShoppingCart
 } from '@fortawesome/free-solid-svg-icons'
 
 // This is important, we are going to let Nuxt worry about the CSS
@@ -44,7 +45,8 @@ library.add(
   faInfoCircle,
   faCheckCircle,
   faRobot,
-  faQuestionCircle
+  faQuestionCircle,
+  faShoppingCart
 )
 
 export default defineNuxtPlugin((nuxtApp) => {
